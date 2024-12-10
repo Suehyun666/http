@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>시험 올 A+ 기원!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: linear-gradient(to bottom, #ffeb3b, #ff9800);
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    h1 {
+      margin-top: 50px;
+      font-size: 3rem;
+      animation: pulse 2s infinite;
+    }
+    p {
+      font-size: 1.5rem;
+    }
+    button {
+      background-color: #4caf50;
+      color: white;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 4px #3e8e41;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    button:active {
+      box-shadow: 0 2px #3e8e41;
+      transform: translateY(2px);
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    #message {
+      font-size: 2rem;
+      color: #d32f2f;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>시험 올 A+ 기원!</h1>
+  <p>모든 시험 A+를 받으려면 버튼을 눌러 기운을 받아보세요!</p>
+  <button onclick="showMessage()">기운 받기 ✨</button>
+  <div id="message"></div>
+
+  <script>
+    function showMessage() {
+      const messages = [
+        "A+ 기운이 팡팡!",
+        "모든 시험 대박 기원!",
+        "열공 화이팅! 🌟",
+        "당신은 이미 A+!",
+        "시험운 최고! 🚀"
+      ];
+      const randomMessage = messages[Math.floor(Math.random() * messages.length)];
+      document.getElementById('message').innerText = randomMessage;
+    }
+  </script>
+</body>
+</html>
